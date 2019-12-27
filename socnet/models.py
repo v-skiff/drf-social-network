@@ -1,7 +1,8 @@
 from django.db import models
+from vote.models import VoteModel
 
 
-class Post(models.Model):
+class Post(VoteModel, models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     title = models.CharField(max_length=100)

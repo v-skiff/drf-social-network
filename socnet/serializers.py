@@ -5,10 +5,11 @@ from socnet.models import Post
 
 class PostSerializer(serializers.HyperlinkedModelSerializer):
     author = serializers.ReadOnlyField(source='author.username')
+    votes = serializers.ReadOnlyField(source='votes.count')
 
     class Meta:
         model = Post
-        fields = ['url', 'id', 'author', 'title', 'body']
+        fields = ['url', 'id', 'author', 'title', 'body', 'votes']
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
