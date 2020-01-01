@@ -1,6 +1,8 @@
+- Docker
 - simple API with token auth
 - hunter.io API to verify email
 - basic tests
 - djoser
 - django-vote (like/unlike)
 - DRF
+- logging
